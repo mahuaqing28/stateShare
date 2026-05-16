@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="一个用于分享今日日程、进度和有趣状态的小网页。"
+    />
+    <title>今日状态共享</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="status-board" aria-labelledby="page-title">
+        <div class="identity-panel">
+          <div class="brand-row">
+            <div class="signal-dot" aria-hidden="true"></div>
+            <span id="last-updated">同步中</span>
+          </div>
+
+          <div class="hero-copy">
+            <p class="eyebrow" id="today-label">今天</p>
+            <h1 id="page-title">我的今日状态</h1>
+            <p class="subtitle" id="tagline">正在加载今日安排...</p>
+          </div>
+
+          <figure class="status-visual" aria-label="状态插画">
+            <img src="assets/status-console.svg" alt="" />
+          </figure>
+
+          <div class="quick-stats" aria-label="状态指标">
+            <div>
+              <span>能量</span>
+              <strong id="energy-value">--</strong>
+            </div>
+            <div>
+              <span>专注</span>
+              <strong id="focus-value">--</strong>
+            </div>
+            <div>
+              <span>进度</span>
+              <strong id="progress-value">--</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-panel">
+          <section class="mood-card" aria-labelledby="status-title">
+            <div>
+              <p class="section-label">Funny status</p>
+              <h2 id="status-title">当前状态</h2>
+            </div>
+            <p id="funny-status" class="funny-status">加载中...</p>
+          </section>
+
+          <section class="progress-card" aria-labelledby="progress-title">
+            <div class="section-heading">
+              <div>
+                <p class="section-label">Today's progress</p>
+                <h2 id="progress-title">今日进度</h2>
+              </div>
+              <span id="progress-chip" class="chip">--</span>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <p id="progress-note" class="muted-text"></p>
+          </section>
+
+          <section aria-labelledby="schedule-title">
+            <div class="section-heading">
+              <div>
+                <p class="section-label">Schedule</p>
+                <h2 id="schedule-title">今天的日程</h2>
+              </div>
+              <span id="schedule-count" class="chip">0 项</span>
+            </div>
+            <ol id="schedule-list" class="schedule-list"></ol>
+          </section>
+
+          <section aria-labelledby="share-title" class="share-card">
+            <div>
+              <p class="section-label">Share</p>
+              <h2 id="share-title">一句话状态</h2>
+            </div>
+            <p id="share-text" class="share-text"></p>
+            <button id="copy-button" class="copy-button" type="button">
+              复制状态
+            </button>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
