@@ -1,30 +1,30 @@
 {
-  "owner": "我",
-  "today": "2026-05-17",
-  "tagline": "今天也在认真生活，顺便把任务一个个从待办区请出去。",
-  "updatedAt": "2026-05-17 0:33",
-  "energy": 76,
-  "focus": 82,
-  "progress": 48,
-  "funnyStatus": "脑内开了 17 个标签页，但主线程还活着。",
-  "progressNote": "",
+  "owner": "mahuaqing",
+  "today": "2026-05-19",
+  "tagline": "不止是待办，生活不仅仅是个栈，还是个随机数生成器，让自己每天都有收获！！",
+  "updatedAt": "2026-05-19 0:38",
+  "energy": 90,
+  "focus": 60,
+  "progress": 25,
+  "funnyStatus": "I'm focused on my work!",
+  "progressNote": "我需要提高纪律性！！",
   "schedule": [
     {
+      "time": "09:00",
+      "title": "起床",
+      "note": "",
+      "status": "todo"
+    },
+    {
+      "time": "21:30",
+      "title": "跑步准备体侧",
+      "note": "",
+      "status": "todo"
+    },
+    {
       "time": "09:30",
-      "title": "写思想汇报",
+      "title": "入党志愿书",
       "note": "",
-      "status": "todo"
-    },
-    {
-      "time": "14:30",
-      "title": "写数据库作业",
-      "note": "",
-      "status": "todo"
-    },
-    {
-      "time": "17:00",
-      "title": "完善春闱计划填表",
-      "note": "It's hard ,but we can gain from it!",
       "status": "todo"
     }
   ],
