@@ -1,108 +1,131 @@
-const statusLabels = {
-  done: "已完成",
-  doing: "进行中",
-  todo: "待开始",
-};
-
 const fallbackData = {
-  owner: "我",
-  tagline: "今天也在把混乱整理成可以交付的小块。",
+  owner: "2049",
+  today: "",
+  tagline: "把今天排成能真实发生的形状。",
   updatedAt: "手动更新",
-  energy: 72,
-  focus: 80,
-  progress: 46,
-  funnyStatus: "大脑正在加载，咖啡驱动器运行正常。",
-  progressNote: "先推进最重要的一件事，剩下的排队进站。",
+  today_bgm: "Night Drive - 2049 Radio",
+  funnyStatus: "今日系统在线，准备按计划推进。",
   schedule: [
     {
-      time: "09:30",
+      date: "",
       title: "整理今日目标",
-      note: "把任务拆成能下手的三块",
-      status: "done",
+      type: "TIME_BLOCK",
+      start_time: "09:30",
+      end_time: "10:00",
     },
     {
-      time: "14:00",
+      date: "",
       title: "深度工作",
-      note: "关掉干扰，专注推进主线",
-      status: "doing",
+      type: "TIME_BLOCK",
+      start_time: "14:00",
+      end_time: "16:00",
     },
     {
-      time: "20:30",
+      date: "",
       title: "复盘和同步",
-      note: "记录进度，更新明天入口",
-      status: "todo",
+      type: "FLOATING",
     },
   ],
 };
 
 const $ = (selector) => document.querySelector(selector);
 
-const clamp = (value, min = 0, max = 100) => {
-  const number = Number(value);
-  if (Number.isNaN(number)) return min;
-  return Math.min(Math.max(number, min), max);
-};
-
-const formatToday = () =>
-  new Intl.DateTimeFormat("zh-CN", {
+const formatToday = (dateValue) => {
+  const date = dateValue ? new Date(`${dateValue}T00:00:00+08:00`) : new Date();
+  if (Number.isNaN(date.getTime())) return dateValue || "今天";
+  return new Intl.DateTimeFormat("zh-CN", {
     timeZone: "Asia/Shanghai",
     month: "long",
     day: "numeric",
     weekday: "long",
-  }).format(new Date());
+  }).format(date);
+};
 
-const renderSchedule = (items) => {
-  const list = $("#schedule-list");
+const scheduleItems = (data) => (Array.isArray(data.schedule) ? data.schedule : []);
+
+const isTimeBlock = (item) => item.type === "TIME_BLOCK" && Boolean(item.start_time);
+
+const timeRange = (item) => {
+  if (item.start_time && item.end_time) return `${item.start_time} - ${item.end_time}`;
+  return item.start_time || item.end_time || "--:--";
+};
+
+const renderTimeline = (items) => {
+  const list = $("#timeline-list");
   list.innerHTML = "";
+
+  if (!items.length) {
+    const li = document.createElement("li");
+    li.className = "empty-state";
+    li.textContent = "今天没有固定时间块。";
+    list.appendChild(li);
+    return;
+  }
 
   items.forEach((item) => {
     const li = document.createElement("li");
-    li.className = "schedule-item";
-
-    const pillClass = item.status === "doing" ? "doing" : item.status === "todo" ? "todo" : "";
     const time = document.createElement("time");
-    const main = document.createElement("div");
     const title = document.createElement("strong");
-    const note = document.createElement("span");
-    const status = document.createElement("span");
 
+    li.className = "timeline-item";
     time.className = "time-block";
-    time.textContent = item.time || "--:--";
-    main.className = "schedule-main";
+    time.textContent = timeRange(item);
     title.textContent = item.title || "未命名日程";
-    note.textContent = item.note || "";
-    status.className = `status-pill ${pillClass}`.trim();
-    status.textContent = statusLabels[item.status] || item.status || "待更新";
 
-    main.append(title, note);
-    li.append(time, main, status);
+    li.append(time, title);
+    list.appendChild(li);
+  });
+};
+
+const renderFloating = (items) => {
+  const list = $("#floating-list");
+  list.innerHTML = "";
+
+  if (!items.length) {
+    const li = document.createElement("li");
+    li.className = "empty-state";
+    li.textContent = "今天没有浮动安排。";
+    list.appendChild(li);
+    return;
+  }
+
+  items.forEach((item) => {
+    const li = document.createElement("li");
+    const title = document.createElement("strong");
+    const badge = document.createElement("span");
+
+    li.className = "floating-item";
+    title.textContent = item.title || "未命名日程";
+    badge.className = "type-badge";
+    badge.textContent = item.type || "FLOATING";
+
+    li.append(title, badge);
     list.appendChild(li);
   });
 };
 
 const render = (data) => {
-  const progress = clamp(data.progress);
-  const energy = clamp(data.energy);
-  const focus = clamp(data.focus);
-  const schedule = Array.isArray(data.schedule) ? data.schedule : [];
-  const doneCount = schedule.filter((item) => item.status === "done").length;
+  const schedule = scheduleItems(data);
+  const timeBlocks = schedule.filter(isTimeBlock).sort((left, right) =>
+    timeRange(left).localeCompare(timeRange(right))
+  );
+  const floating = schedule.filter((item) => !isTimeBlock(item));
 
-  $("#today-label").textContent = formatToday();
-  $("#page-title").textContent = `${data.owner || "我"}的今日状态`;
+  $("#today-label").textContent = formatToday(data.today);
+  $("#page-title").textContent = `${data.owner || "2049"}的今日状态`;
   $("#tagline").textContent = data.tagline || fallbackData.tagline;
   $("#last-updated").textContent = data.updatedAt ? `更新：${data.updatedAt}` : "更新：刚刚";
-  $("#energy-value").textContent = `${energy}%`;
-  $("#focus-value").textContent = `${focus}%`;
-  $("#progress-value").textContent = `${progress}%`;
+  $("#bgm-value").textContent = data.today_bgm || fallbackData.today_bgm;
+  $("#schedule-value").textContent = `${timeBlocks.length} 个时间块`;
+  $("#floating-value").textContent = `${floating.length} 个浮动项`;
   $("#funny-status").textContent = data.funnyStatus || fallbackData.funnyStatus;
-  $("#progress-chip").textContent = `${progress}%`;
-  $("#progress-bar").style.width = `${progress}%`;
-  $("#progress-note").textContent = data.progressNote || fallbackData.progressNote;
-  $("#schedule-count").textContent = `${schedule.length} 项`;
+  $("#timeline-count").textContent = `${timeBlocks.length} 项`;
+  $("#floating-count").textContent = `${floating.length} 项`;
 
-  renderSchedule(schedule);
+  renderTimeline(timeBlocks);
+  renderFloating(floating);
 
-  const shareText = `${formatToday()}｜${data.owner || "我"}：${data.funnyStatus || fallbackData.funnyStatus} 今日进度 ${progress}%，日程 ${doneCount}/${schedule.length} 完成。`;
+  const shareText = `${formatToday(data.today)}｜${data.owner || "2049"}：${data.funnyStatus || fallbackData.funnyStatus} 固定时间块 ${timeBlocks.length} 个，浮动安排 ${floating.length} 个。`;
   $("#share-text").textContent = shareText;
   $("#copy-button").onclick = async () => {
     await navigator.clipboard.writeText(shareText);

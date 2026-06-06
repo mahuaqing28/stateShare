@@ -1,66 +1,34 @@
 {
-  "owner": "mahuaqing",
-  "today": "2026-05-19",
-  "tagline": "不止是待办，生活不仅仅是个栈，还是个随机数生成器，让自己每天都有收获！！",
-  "updatedAt": "2026-05-19 0:38",
-  "energy": 90,
-  "focus": 60,
-  "progress": 25,
-  "funnyStatus": "I'm focused on my work!",
-  "progressNote": "我需要提高纪律性！！",
+  "owner": "2049",
+  "today": "2026-06-06",
+  "tagline": "把今天排成能真实发生的形状。",
+  "updatedAt": "2026-06-06 20:30",
+  "today_bgm": "Night Drive - 2049 Radio",
+  "funnyStatus": "今日系统在线，准备按计划推进。",
   "schedule": [
     {
-      "time": "09:00",
-      "title": "起床",
-      "note": "",
-      "status": "todo"
+      "date": "2026-06-06",
+      "title": "整理今日目标",
+      "type": "TIME_BLOCK",
+      "start_time": "09:30",
+      "end_time": "10:00"
     },
     {
-      "time": "21:30",
-      "title": "跑步准备体侧",
-      "note": "",
-      "status": "todo"
+      "date": "2026-06-06",
+      "title": "深度工作",
+      "type": "TIME_BLOCK",
+      "start_time": "14:00",
+      "end_time": "16:00"
     },
     {
-      "time": "09:30",
-      "title": "入党志愿书",
-      "note": "",
-      "status": "todo"
+      "date": "2026-06-06",
+      "title": "跑步准备体测",
+      "type": "FLOATING"
+    },
+    {
+      "date": "2026-06-06",
+      "title": "复盘和同步",
+      "type": "FLOATING"
     }
-  ],
-  "tomorrowSchedule": {
-    "date": "2026-05-17",
-    "note": "明天先把入口摆好，到点以后它会自动接班。",
-    "tagline": "明天的主线是继续推进，不让待办重新长成森林。",
-    "funnyStatus": "明天的我已经预约了冷静，看看能不能准时到岗。",
-    "progressNote": "新的一天会从 0% 开始，先处理最重要的一件事。",
-    "energy": 75,
-    "focus": 80,
-    "items": [
-      {
-        "time": "09:30",
-        "title": "确认明日第一任务",
-        "note": "打开状态页，先把主线任务锁定。",
-        "status": "todo"
-      },
-      {
-        "time": "14:00",
-        "title": "推进核心任务",
-        "note": "留一段完整时间给真正重要的事情。",
-        "status": "todo"
-      },
-      {
-        "time": "16:00",
-        "title": "写两篇思想汇报",
-        "note": "先列提纲，再分两篇完成，别让空白页盯太久。",
-        "status": "todo"
-      },
-      {
-        "time": "19:30",
-        "title": "写数据库作业",
-        "note": "把题目拆开做，先完成能确定的部分。",
-        "status": "todo"
-      }
-    ]
-  }
+  ]
 }

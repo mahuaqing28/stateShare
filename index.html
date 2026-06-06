@@ -29,18 +29,18 @@
             <img src="assets/status-console.svg" alt="" />
           </figure>
 
-          <div class="quick-stats" aria-label="状态指标">
+          <div class="quick-stats" aria-label="今日概览">
             <div>
-              <span>能量</span>
-              <strong id="energy-value">--</strong>
+              <span>BGM</span>
+              <strong id="bgm-value">--</strong>
             </div>
             <div>
-              <span>专注</span>
-              <strong id="focus-value">--</strong>
+              <span>时间块</span>
+              <strong id="schedule-value">--</strong>
             </div>
             <div>
-              <span>进度</span>
-              <strong id="progress-value">--</strong>
+              <span>浮动</span>
+              <strong id="floating-value">--</strong>
             </div>
           </div>
         </div>
@@ -54,29 +54,26 @@
             <p id="funny-status" class="funny-status">加载中...</p>
           </section>
 
-          <section class="progress-card" aria-labelledby="progress-title">
+          <section aria-labelledby="timeline-title" class="timeline-card">
             <div class="section-heading">
               <div>
-                <p class="section-label">Today's progress</p>
-                <h2 id="progress-title">今日进度</h2>
+                <p class="section-label">Timeline</p>
+                <h2 id="timeline-title">今日时间轴</h2>
               </div>
-              <span id="progress-chip" class="chip">--</span>
+              <span id="timeline-count" class="chip">0 项</span>
             </div>
-            <div class="progress-track" aria-hidden="true">
-              <div id="progress-bar" class="progress-bar"></div>
-            </div>
-            <p id="progress-note" class="muted-text"></p>
+            <ol id="timeline-list" class="timeline-list"></ol>
           </section>
 
-          <section aria-labelledby="schedule-title">
+          <section aria-labelledby="floating-title" class="floating-card">
             <div class="section-heading">
               <div>
-                <p class="section-label">Schedule</p>
-                <h2 id="schedule-title">今天的日程</h2>
+                <p class="section-label">Floating</p>
+                <h2 id="floating-title">浮动安排</h2>
               </div>
-              <span id="schedule-count" class="chip">0 项</span>
+              <span id="floating-count" class="chip">0 项</span>
             </div>
-            <ol id="schedule-list" class="schedule-list"></ol>
+            <ul id="floating-list" class="floating-list"></ul>
           </section>
 
           <section aria-labelledby="share-title" class="share-card">
