@@ -1,34 +1,9 @@
 {
   "owner": "2049",
-  "today": "2026-06-06",
-  "tagline": "把今天排成能真实发生的形状。",
-  "updatedAt": "2026-06-06 20:30",
-  "today_bgm": "Night Drive - 2049 Radio",
-  "funnyStatus": "今日系统在线，准备按计划推进。",
-  "schedule": [
-    {
-      "date": "2026-06-06",
-      "title": "整理今日目标",
-      "type": "TIME_BLOCK",
-      "start_time": "09:30",
-      "end_time": "10:00"
-    },
-    {
-      "date": "2026-06-06",
-      "title": "深度工作",
-      "type": "TIME_BLOCK",
-      "start_time": "14:00",
-      "end_time": "16:00"
-    },
-    {
-      "date": "2026-06-06",
-      "title": "跑步准备体测",
-      "type": "FLOATING"
-    },
-    {
-      "date": "2026-06-06",
-      "title": "复盘和同步",
-      "type": "FLOATING"
-    }
-  ]
+  "today": "2026-06-07",
+  "updatedAt": "2026-06-07 00:14",
+  "tagline": "the system has just started !",
+  "funnyStatus": "混乱但正在前进",
+  "today_bgm": "Stronger - Kanye West",
+  "schedule": []
 }
