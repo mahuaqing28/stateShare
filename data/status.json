@@ -8,6 +8,13 @@
   "schedule": [
     {
       "date": "2026-06-07",
+      "title": "让ai分析复习计划",
+      "type": "TIME_BLOCK",
+      "start_time": "09:30",
+      "end_time": "10:20"
+    },
+    {
+      "date": "2026-06-07",
       "title": "下载所有PPT",
       "type": "FLOATING"
     }
