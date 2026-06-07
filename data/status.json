@@ -5,5 +5,11 @@
   "tagline": "the system has just started !",
   "funnyStatus": "混乱但正在前进",
   "today_bgm": "Stronger - Kanye West",
-  "schedule": []
+  "schedule": [
+    {
+      "date": "2026-06-07",
+      "title": "下载所有PPT",
+      "type": "FLOATING"
+    }
+  ]
 }
