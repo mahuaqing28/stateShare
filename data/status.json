@@ -1,22 +1,9 @@
 {
   "owner": "2049",
-  "today": "2026-06-07",
-  "updatedAt": "2026-06-07 18:29",
+  "today": "2026-06-08",
+  "updatedAt": "2026-06-08 11:04",
   "tagline": "手机能不看就不看了吧",
   "funnyStatus": "纪律，纪律，还是纪律！",
   "today_bgm": "青花瓷dj版",
-  "schedule": [
-    {
-      "date": "2026-06-07",
-      "title": "让ai分析复习计划",
-      "type": "TIME_BLOCK",
-      "start_time": "09:30",
-      "end_time": "10:20"
-    },
-    {
-      "date": "2026-06-07",
-      "title": "下载所有PPT",
-      "type": "FLOATING"
-    }
-  ]
+  "schedule": []
 }
