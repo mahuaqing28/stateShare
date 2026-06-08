@@ -5,5 +5,11 @@
   "tagline": "手机能不看就不看了吧",
   "funnyStatus": "纪律，纪律，还是纪律！",
   "today_bgm": "青花瓷dj版",
-  "schedule": []
+  "schedule": [
+    {
+      "date": "2026-06-08",
+      "title": "下载所有PPT",
+      "type": "FLOATING"
+    }
+  ]
 }
