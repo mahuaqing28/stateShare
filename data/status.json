@@ -1,29 +1,9 @@
 {
   "owner": "2049",
-  "today": "2026-06-08",
-  "updatedAt": "2026-06-08 14:53",
+  "today": "2026-06-09",
+  "updatedAt": "2026-06-09 00:39",
   "tagline": "手机能不看就不看了吧",
   "funnyStatus": "纪律，纪律，还是纪律！",
   "today_bgm": "天亮之前说再见dj版",
-  "schedule": [
-    {
-      "date": "2026-06-08",
-      "title": "让ai分析复习计划",
-      "type": "TIME_BLOCK",
-      "start_time": "13:30",
-      "end_time": "15:30"
-    },
-    {
-      "date": "2026-06-08",
-      "title": "党员大会推送",
-      "type": "TIME_BLOCK",
-      "start_time": "21:00",
-      "end_time": "23:00"
-    },
-    {
-      "date": "2026-06-08",
-      "title": "下载所有PPT",
-      "type": "FLOATING"
-    }
-  ]
+  "schedule": []
 }
