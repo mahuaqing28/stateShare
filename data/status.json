@@ -15,6 +15,13 @@
     },
     {
       "date": "2026-06-08",
+      "title": "党员大会推送",
+      "type": "TIME_BLOCK",
+      "start_time": "21:00",
+      "end_time": "23:00"
+    },
+    {
+      "date": "2026-06-08",
       "title": "下载所有PPT",
       "type": "FLOATING"
     }
