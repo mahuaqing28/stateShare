@@ -5,5 +5,13 @@
   "tagline": "手机能不看就不看了吧",
   "funnyStatus": "纪律，纪律，还是纪律！",
   "today_bgm": "天亮之前说再见dj版",
-  "schedule": []
+  "schedule": [
+    {
+      "date": "2026-06-09",
+      "title": "复习ppt过完一遍",
+      "type": "TIME_BLOCK",
+      "start_time": "09:00",
+      "end_time": "11:30"
+    }
+  ]
 }
