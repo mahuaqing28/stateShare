@@ -12,6 +12,13 @@
       "type": "TIME_BLOCK",
       "start_time": "09:30",
       "end_time": "11:30"
+    },
+    {
+      "date": "2026-06-10",
+      "title": "数据库备份恢复",
+      "type": "TIME_BLOCK",
+      "start_time": "14:30",
+      "end_time": "15:20"
     }
   ]
 }
