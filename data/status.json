@@ -5,5 +5,13 @@
   "tagline": "注意时间，分清主次",
   "funnyStatus": "清晨的阳光将会见证我的作息重回正轨",
   "today_bgm": "It's Been Such A Long Time",
-  "schedule": []
+  "schedule": [
+    {
+      "date": "2026-06-10",
+      "title": "复习ppt过完一遍",
+      "type": "TIME_BLOCK",
+      "start_time": "09:30",
+      "end_time": "11:30"
+    }
+  ]
 }
