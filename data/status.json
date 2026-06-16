@@ -12,6 +12,13 @@
       "type": "TIME_BLOCK",
       "start_time": "19:27",
       "end_time": "20:27"
+    },
+    {
+      "date": "2026-06-16",
+      "title": "编译作业5",
+      "type": "TIME_BLOCK",
+      "start_time": "20:28",
+      "end_time": "21:30"
     }
   ]
 }
