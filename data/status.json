@@ -1,31 +1,9 @@
 {
   "owner": "2049",
-  "today": "2026-06-11",
-  "updatedAt": "2026-06-11 14:24",
+  "today": "2026-06-16",
+  "updatedAt": "2026-06-16 19:26",
   "tagline": "think less, do more",
   "funnyStatus": "坚持，不为什么，单纯坚持",
   "today_bgm": "心墙",
-  "schedule": [
-    {
-      "date": "2026-06-11",
-      "title": "测试部分",
-      "type": "TIME_BLOCK",
-      "start_time": "14:23",
-      "end_time": "14:45"
-    },
-    {
-      "date": "2026-06-11",
-      "title": "设计部分",
-      "type": "TIME_BLOCK",
-      "start_time": "14:51",
-      "end_time": "15:30"
-    },
-    {
-      "date": "2026-06-11",
-      "title": "需求分析部分",
-      "type": "TIME_BLOCK",
-      "start_time": "15:30",
-      "end_time": "16:00"
-    }
-  ]
+  "schedule": []
 }
