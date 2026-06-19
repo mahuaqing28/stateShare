@@ -12,6 +12,13 @@
       "type": "TIME_BLOCK",
       "start_time": "17:20",
       "end_time": "18:20"
+    },
+    {
+      "date": "2026-06-19",
+      "title": "复习编译第12章",
+      "type": "TIME_BLOCK",
+      "start_time": "20:20",
+      "end_time": "22:21"
     }
   ]
 }
