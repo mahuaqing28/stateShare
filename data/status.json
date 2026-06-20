@@ -1,24 +1,9 @@
 {
   "owner": "2049",
-  "today": "2026-06-19",
-  "updatedAt": "2026-06-19 17:23",
+  "today": "2026-06-20",
+  "updatedAt": "2026-06-20 12:15",
   "tagline": "think less, do more",
   "funnyStatus": "回归生活本真",
   "today_bgm": "白色风车",
-  "schedule": [
-    {
-      "date": "2026-06-19",
-      "title": "先把ppt全部上传给codex,形成复习框架",
-      "type": "TIME_BLOCK",
-      "start_time": "17:20",
-      "end_time": "18:20"
-    },
-    {
-      "date": "2026-06-19",
-      "title": "复习编译第12章",
-      "type": "TIME_BLOCK",
-      "start_time": "20:20",
-      "end_time": "22:21"
-    }
-  ]
+  "schedule": []
 }
